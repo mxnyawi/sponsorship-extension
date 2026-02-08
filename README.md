@@ -84,10 +84,16 @@ const SUPABASE_PUBLISHABLE_KEY = "<publishable-key>";
 
 ### Apply config from .env
 
-If you update `.env`, re-apply it:
+If you update `.env`, re-apply it locally:
 
 ```bash
 ./scripts/apply-env.sh
+```
+
+To apply secrets to Supabase/Cloudflare:
+
+```bash
+./scripts/apply-env-remote.sh
 ```
 
 ### 3b) Worker config
@@ -135,6 +141,10 @@ curl -s \
 - The extension uses publishable keys only.
 - Edge Function uses a separate SYNC_TOKEN.
 - `.env` is local only; use `.env.example` as reference.
+
+## Privacy policy
+
+See `privacy-policy.md`.
 
 ## License
 
