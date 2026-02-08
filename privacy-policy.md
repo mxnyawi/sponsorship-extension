@@ -39,4 +39,4 @@ You can uninstall the extension at any time to stop all data processing.
 
 ## Contact
 
-If you have questions about this policy, contact: <YOUR_EMAIL>
+If you have questions about this policy, contact: nourelmenyawi@gmail.com
