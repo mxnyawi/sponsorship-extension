@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Visa Sponsor Checker",
+  "version": "0.1.0",
+  "description": "Check if a company appears in the UK visa sponsor register.",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": [
+    "https://*.linkedin.com/*",
+    "https://*.indeed.com/*",
+    "https://*.supabase.co/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.linkedin.com/jobs/*",
+        "https://*.linkedin.com/jobs/view/*",
+        "https://*.linkedin.com/jobs/view/*/*",
+        "https://*.indeed.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "Visa Sponsor Checker",
+    "default_popup": "popup.html"
+  }
+}

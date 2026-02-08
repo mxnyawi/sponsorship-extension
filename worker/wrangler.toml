@@ -1,0 +1,28 @@
+name = "visa-sponsor-sync"
+main = "src/index.js"
+compatibility_date = "2026-02-01"
+
+[triggers]
+crons = ["0 6 * * 1"]
+
+[vars]
+SUPABASE_URL = "https://<project>.supabase.co"
+SUPABASE_PUBLISHABLE_KEY = "<publishable-key>"
+
+[observability]
+enabled = false
+head_sampling_rate = 1
+
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+persist = true
+invocation_logs = true
+
+[observability.traces]
+enabled = false
+persist = true
+head_sampling_rate = 1
+
+# Set SUPABASE_SERVICE_ROLE_KEY as a secret with:
+# wrangler secret put SUPABASE_SERVICE_ROLE_KEY

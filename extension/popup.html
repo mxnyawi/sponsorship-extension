@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Visa Sponsor Checker</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <div class="hero">
+        <div class="hero-top">
+          <div>
+            <div class="title">Visa Sponsor Checker</div>
+            <div class="subtitle" id="company">Checking this job...</div>
+          </div>
+          <div class="pill" id="status-pill">Loading</div>
+        </div>
+
+        <div class="status-card" id="status">Loading...</div>
+
+        <div class="confidence" id="confidence">
+          <div class="confidence-label">Confidence</div>
+          <div class="confidence-track">
+            <div class="confidence-fill" id="confidence-fill"></div>
+          </div>
+          <div class="confidence-value" id="confidence-value">--</div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="info-card">
+          <div class="info-label">Company</div>
+          <div class="info-value" id="company-name">--</div>
+          <div class="info-sub" id="company-location">--</div>
+        </div>
+        <div class="info-card">
+          <div class="info-label">Sponsor Type</div>
+          <div class="info-value" id="sponsor-type">--</div>
+        </div>
+        <div class="info-card">
+          <div class="info-label">Visa Route</div>
+          <div class="info-value" id="visa-route">--</div>
+        </div>
+      </div>
+
+      <div class="matches" id="matches"></div>
+
+      <div class="footer">
+        <div class="note">Verify on official register.</div>
+        <div class="actions">
+          <button class="ghost" id="copy">Copy company</button>
+          <a class="link" href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers" target="_blank" rel="noreferrer">Open register</a>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

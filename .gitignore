@@ -1,0 +1,17 @@
+.DS_Store
+*.crx
+*.pem
+*.zip
+*.csv
+*:Zone.Identifier
+dist/
+node_modules/
+.env
+.env.*
+!.env.example
+.dev.vars
+.wrangler/
+supabase/.branches
+supabase/.temp
+supabase/.env
+supabase/.env.*
